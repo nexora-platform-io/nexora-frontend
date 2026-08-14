@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,11 +17,17 @@ import { AuthPageFrame } from "../AuthCard";
 import { registerStyles as styles } from "./RegisterForm.styles";
 
 export function RegisterForm() {
+  const router = useRouter();
+
   const t = useTranslations("auth");
   const { mutate, isError, isPending } = useRegister();
 
   const onSubmit = (data: RegisterDto) => {
-    mutate(data);
+    mutate(data, {
+      onSuccess: () => {
+        router.push(`${ROUTES.dashboard}`);
+      },
+    });
   };
 
   const {
