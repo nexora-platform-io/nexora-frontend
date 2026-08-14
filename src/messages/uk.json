@@ -1,0 +1,38 @@
+{
+  "homepage": {
+    "test": "домашня сторінка"
+  },
+  "auth": {
+    "brand": "Codeflow",
+    "login": {
+      "title": "З поверненням",
+      "description": "Увійдіть, щоб продовжити роботу у своєму просторі.",
+      "footerText": "Ще не маєте облікового запису?",
+      "footerLink": "Зареєструватися",
+      "email": "Електронна пошта",
+      "password": "Пароль",
+      "emailPlaceholder": "you@example.com",
+      "passwordPlaceholder": "Введіть пароль",
+      "submit": "Увійти",
+      "submitting": "Зачекайте…"
+    },
+    "register": {
+      "title": "Створіть обліковий запис",
+      "description": "Налаштуйте свій простір за кілька секунд.",
+      "footerText": "Вже маєте обліковий запис?",
+      "footerLink": "Увійти",
+      "username": "Ім’я користувача",
+      "email": "Електронна пошта",
+      "password": "Пароль",
+      "usernamePlaceholder": "yourname",
+      "emailPlaceholder": "you@example.com",
+      "passwordPlaceholder": "Створіть пароль",
+      "submit": "Створити обліковий запис",
+      "submitting": "Зачекайте…"
+    }
+  },
+  "userMenu": {
+    "open": "Відкрити меню користувача",
+    "logout": "Вийти"
+  }
+}
