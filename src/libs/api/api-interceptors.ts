@@ -1,5 +1,5 @@
-import { api, refreshApi } from './api-client';
-import { getAccessToken, setAccessToken } from './auth-token';
+import { api, refreshApi } from "./api-client";
+import { getAccessToken, setAccessToken } from "./auth-token";
 
 api.interceptors.request.use((config) => {
   const token = getAccessToken();
@@ -23,7 +23,7 @@ api.interceptors.response.use(
     ) {
       originalRequest._retry = true;
 
-      const { data } = await refreshApi.post('/auth/refresh');
+      const { data } = await refreshApi.post("/auth/refresh");
 
       setAccessToken(data.data.accessToken);
 

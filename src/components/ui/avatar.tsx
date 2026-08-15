@@ -1,8 +1,8 @@
-import type * as React from 'react';
+import type * as React from "react";
 
-import { Avatar as AvatarPrimitive } from '@base-ui/react/avatar';
+import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";
 
-import { cn } from '@/libs/utils/utils';
+import { cn } from "@/libs/utils/utils";
 
 type AvatarProps = React.ComponentProps<typeof AvatarPrimitive.Root>;
 type AvatarImageProps = React.ComponentProps<typeof AvatarPrimitive.Image>;

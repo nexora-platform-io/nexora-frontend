@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { cn } from '@/libs/utils/utils';
+import { cn } from "@/libs/utils/utils";
 
-import { inputStyles } from './input.styles';
+import { inputStyles } from "./input.styles";
 
-type InputProps = React.ComponentProps<'input'>;
+type InputProps = React.ComponentProps<"input">;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type = 'text', ...props }, ref) => {
+  ({ className, type = "text", ...props }, ref) => {
     return (
       <input
         ref={ref}
@@ -20,6 +20,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   },
 );
 
-Input.displayName = 'Input';
+Input.displayName = "Input";
 
 export { Input };

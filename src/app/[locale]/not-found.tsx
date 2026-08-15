@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { cn } from '@/libs/utils/utils';
+import { cn } from "@/libs/utils/utils";
 
-import { notFoundStyles as styles } from './not-found.styles';
+import { notFoundStyles as styles } from "./not-found.styles";
 
 export default function NotFound() {
   return (

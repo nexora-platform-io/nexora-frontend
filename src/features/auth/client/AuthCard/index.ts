@@ -1,1 +1,1 @@
-export { AuthPageFrame } from './AuthCard';
+export { AuthPageFrame } from "./AuthCard";

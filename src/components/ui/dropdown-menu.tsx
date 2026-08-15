@@ -1,8 +1,8 @@
-import type * as React from 'react';
+import type * as React from "react";
 
-import { Menu } from '@base-ui/react/menu';
+import { Menu } from "@base-ui/react/menu";
 
-import { cn } from '@/libs/utils/utils';
+import { cn } from "@/libs/utils/utils";
 
 type DropdownMenuProps = React.ComponentProps<typeof Menu.Root>;
 type DropdownMenuTriggerProps = React.ComponentProps<typeof Menu.Trigger>;
@@ -12,7 +12,7 @@ type DropdownMenuLabelProps = React.ComponentProps<typeof Menu.GroupLabel>;
 type DropdownMenuGroupProps = React.ComponentProps<typeof Menu.Group>;
 type DropdownMenuContentProps = React.ComponentProps<typeof Menu.Popup> & {
   sideOffset?: number;
-  align?: 'start' | 'center' | 'end';
+  align?: "start" | "center" | "end";
 };
 
 function DropdownMenu({ children, ...props }: DropdownMenuProps) {
@@ -29,7 +29,7 @@ function DropdownMenuTrigger({
 function DropdownMenuContent({
   className,
   sideOffset = 12,
-  align = 'end',
+  align = "end",
   children,
   ...props
 }: DropdownMenuContentProps) {
