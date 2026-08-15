@@ -15,14 +15,14 @@ type RootLayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function RootLayout({ children, params }: Readonly<RootLayoutProps>) {
+export default async function RootLayout({
+  children,
+  params,
+}: Readonly<RootLayoutProps>) {
   const { locale } = await params;
 
   return (
-    <html
-      lang={locale}
-      className={cn("font-sans", montserrat.variable)}
-    >
+    <html lang={locale} className={cn("font-sans", montserrat.variable)}>
       <body>
         <NextIntlClientProvider>
           <QueryProvider>{children}</QueryProvider>

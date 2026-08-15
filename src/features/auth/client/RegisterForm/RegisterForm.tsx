@@ -47,14 +47,8 @@ export function RegisterForm() {
       footerHref={ROUTES.auth.login}
       footerLinkText={t("register.footerLink")}
     >
-      <form
-        className={styles.form}
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <label
-          className={styles.field}
-          htmlFor="register-username"
-        >
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <label className={styles.field} htmlFor="register-username">
           <span className={styles.label}>{t("register.username")}</span>
           <Input
             id="register-username"
@@ -63,13 +57,14 @@ export function RegisterForm() {
             autoComplete="username"
             {...register("username")}
           />
-          {errors.username && <AuthError text={errors.username.message ?? "Username is invalid"} />}
+          {errors.username && (
+            <AuthError
+              text={errors.username.message ?? "Username is invalid"}
+            />
+          )}
         </label>
 
-        <label
-          className={styles.field}
-          htmlFor="register-email"
-        >
+        <label className={styles.field} htmlFor="register-email">
           <span className={styles.label}>{t("register.email")}</span>
           <Input
             id="register-email"
@@ -78,13 +73,12 @@ export function RegisterForm() {
             autoComplete="email"
             {...register("email")}
           />
-          {errors.email && <AuthError text={errors.email.message ?? "Email is invalid"} />}
+          {errors.email && (
+            <AuthError text={errors.email.message ?? "Email is invalid"} />
+          )}
         </label>
 
-        <label
-          className={styles.field}
-          htmlFor="register-password"
-        >
+        <label className={styles.field} htmlFor="register-password">
           <span className={styles.label}>{t("register.password")}</span>
           <Input
             id="register-password"
@@ -93,15 +87,16 @@ export function RegisterForm() {
             autoComplete="new-password"
             {...register("password")}
           />
-          {errors.password && <AuthError text={errors.password.message ?? "Password is invalid"} />}
+          {errors.password && (
+            <AuthError
+              text={errors.password.message ?? "Password is invalid"}
+            />
+          )}
         </label>
 
         {isError && <p className={""}>Login failed</p>}
 
-        <Button
-          className={styles.submit}
-          type="submit"
-        >
+        <Button className={styles.submit} type="submit">
           {isPending ? t("register.submitting") : t("register.submit")}
         </Button>
       </form>

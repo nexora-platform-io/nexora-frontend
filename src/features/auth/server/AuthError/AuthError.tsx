@@ -1,4 +1,4 @@
-import { authErrorStyles as styles } from './AuthError.styles';
+import { authErrorStyles as styles } from "./AuthError.styles";
 
 type AuthErrorProps = {
   text: string;

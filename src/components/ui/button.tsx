@@ -1,8 +1,8 @@
-import { Button as ButtonPrimitive } from '@base-ui/react/button';
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
 
-import { cn } from '@/libs/utils/utils';
+import { cn } from "@/libs/utils/utils";
 
-import { buttonStyles } from './button.styles';
+import { buttonStyles } from "./button.styles";
 
 type ButtonVariant = keyof typeof buttonStyles.variants;
 type ButtonSize = keyof typeof buttonStyles.sizes;
@@ -14,8 +14,8 @@ type ButtonProps = ButtonPrimitive.Props & {
 
 function Button({
   className,
-  variant = 'default',
-  size = 'default',
+  variant = "default",
+  size = "default",
   ...props
 }: ButtonProps) {
   return (
