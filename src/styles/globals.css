@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -84,7 +84,7 @@ body {
     linear-gradient(180deg, #040606 0%, var(--background) 100%);
   color: var(--primary-text);
   font-family:
-    Inter, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    Inter, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {

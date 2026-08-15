@@ -2,7 +2,15 @@
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/libs/utils/utils";
 import { ROUTES } from "@/libs/routes";
 
@@ -33,12 +41,11 @@ export function UserMenu() {
   return (
     <div className={styles.root}>
       <DropdownMenu>
-        <DropdownMenuTrigger
-          aria-label={t("open")}
-          className={styles.trigger}
-        >
+        <DropdownMenuTrigger aria-label={t("open")} className={styles.trigger}>
           <Avatar className={styles.avatar}>
-            <AvatarFallback className={styles.avatarFallback}>{user.fallback}</AvatarFallback>
+            <AvatarFallback className={styles.avatarFallback}>
+              {user.fallback}
+            </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
 
@@ -50,7 +57,9 @@ export function UserMenu() {
           <DropdownMenuGroup>
             <DropdownMenuLabel className={styles.label}>
               <Avatar className={cn(styles.avatar, "size-10")}>
-                <AvatarFallback className={styles.avatarFallback}>{user.fallback}</AvatarFallback>
+                <AvatarFallback className={styles.avatarFallback}>
+                  {user.fallback}
+                </AvatarFallback>
               </Avatar>
 
               <span className={styles.userInfo}>

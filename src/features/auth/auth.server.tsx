@@ -1,5 +1,5 @@
-import { LoginForm } from './client/LoginForm';
-import { RegisterForm } from './client/RegisterForm';
+import { LoginForm } from "./client/LoginForm";
+import { RegisterForm } from "./client/RegisterForm";
 
 export function LoginAuthPage() {
   return <LoginForm />;

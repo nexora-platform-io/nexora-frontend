@@ -1,12 +1,12 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
   withCredentials: true,
 });
 
 export const refreshApi = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
   withCredentials: true,
 });
 
@@ -29,7 +29,11 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    if (error.response?.status === 401 && originalRequest && !originalRequest._retry) {
+    if (
+      error.response?.status === 401 &&
+      originalRequest &&
+      !originalRequest._retry
+    ) {
       originalRequest._retry = true;
 
       try {

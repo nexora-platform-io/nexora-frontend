@@ -37,14 +37,8 @@ export function LoginForm() {
       footerHref={ROUTES.auth.register}
       footerLinkText={t("login.footerLink")}
     >
-      <form
-        className={styles.form}
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <label
-          className={styles.field}
-          htmlFor="login-email"
-        >
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <label className={styles.field} htmlFor="login-email">
           <span className={styles.label}>{t("login.email")}</span>
           <Input
             id="login-email"
@@ -55,10 +49,7 @@ export function LoginForm() {
           />
         </label>
 
-        <label
-          className={styles.field}
-          htmlFor="login-password"
-        >
+        <label className={styles.field} htmlFor="login-password">
           <span className={styles.label}>{t("login.password")}</span>
           <Input
             id="login-password"
@@ -71,10 +62,7 @@ export function LoginForm() {
 
         {isError && <p className={""}>Login failed</p>}
 
-        <Button
-          className={styles.submit}
-          type="submit"
-        >
+        <Button className={styles.submit} type="submit">
           {isPending ? t("login.submitting") : t("login.submit")}
         </Button>
       </form>
